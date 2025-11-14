@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            /* add foreign key for state_id and name as string */
             $table->foreignId('state_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->timestamps();
